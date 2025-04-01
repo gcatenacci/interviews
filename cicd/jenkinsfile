@@ -1,0 +1,26 @@
+pipeline {
+  agent any
+
+  environment {
+    IMAGE = "interview-app"
+  }
+
+  stages {
+    stage('Checkout') {
+      steps {
+        // Checkout the code from the repository
+      }
+    }
+
+    stage('Build') {
+      steps {
+        // build the Docker image and push to ECR
+      }
+    }
+    stage('Deploy') {
+      steps {
+        // Deploy the Docker image to AWS Fargate
+      }
+    }
+  }
+}

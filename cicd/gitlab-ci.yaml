@@ -1,0 +1,17 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  DOCKER_IMAGE: "$CI_REGISTRY_IMAGE/app"
+
+
+build:  
+  # Build the docker image
+  # bonus - build only if it's main or develop branch
+
+deploy:
+  # Deploy the docker image to AWS ECS
+  # Deploy on different environments based on branch
+  # main -> production
+  # develop -> staging
